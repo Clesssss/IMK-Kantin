@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2023 at 08:40 PM
+-- Generation Time: May 22, 2024 at 11:53 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,7 +40,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`user_id`, `menu_id`, `quantity`, `note`, `subtotal`) VALUES
-(1, 41, 1, '', 65000);
+(1, 41, 1, '', 65000),
+(17, 1, 1, '', 150000);
 
 -- --------------------------------------------------------
 
@@ -153,13 +154,13 @@ INSERT INTO `stall` (`stall_id`, `name`, `description`, `image`, `kantin_id`, `o
 (1, 'Tokyo Mirage', 'Japanese restaurant offering a delightful fusion of Tokyo\'s flavors. Enjoy carefully crafted sushi, flavorful miso-glazed cod, and inventive dishes for a unique dining experience.', 'https://d267qvt8mf7rfa.cloudfront.net/restaurant/128/mainImage.jpg', 1, 9),
 (2, 'Golden Wok', 'Captivating Chinese eatery that brings the rich culinary heritage of China to life. Indulge in expertly crafted dim sum, savory Peking duck, and an array of authentic delicacies.', 'https://images.squarespace-cdn.com/content/v1/596fd9989f7456d6bbc11ad1/1582582081228-P0QCXXEM7P606OE2XIBO/The+Formosa+Cafe+1.jpg', 1, 9),
 (3, 'Bellissimo Bistro', 'An enchanting Italian haven, beckons with a symphony of flavors. Savor the essence of Italy with delectable pizzas, exquisite pasta, and a delightful array of authentic Italian delights.', 'https://static.thehoneycombers.com/wp-content/uploads/sites/2/2022/12/italian-restaurants-singapore-kamranaydinov-freepik-900x642.jpg', 1, 9),
-(4, 'Warung Kuning', 'Savor authentic Indonesian flavors, featuring traditional delights like rendang and nasi goreng. Embracing heritage in a cozy setting, it\'s a golden haven for those seeking culinary nostalgia.\r\n\r\n\r\n\r\n\r\n\r\n', 'https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/missing-the-delicious-flavours-of-indonesia-check-out-these-places/warungsiska.jpg', 2, 11),
+(4, 'Warung Kuning', 'Savor authentic Indonesian flavors, featuring traditional delights like rendang and nasi goreng. Embracing heritage in a cozy setting, it\'s a golden haven for those seeking culinary nostalgia.\r\n\r\n\r\n\r\n\r\n\r\n', 'https://storage.googleapis.com/flip-prod-mktg-strapi/media-library/Indonesian_Foods_80deed788b/Indonesian_Foods_80deed788b.png', 2, 11),
 (5, 'Brasserie du Château', 'An enchanting French restaurant. Impeccable service complements a menu featuring classic French delicacies with a modern twist. From escargot to delicate pastries, every dish is a symphony of flavor, inviting you to savor the essence of French gastronomy.\r\n\r\n\r\n\r\n\r\n\r\n', 'https://www.japantimes.co.jp/uploads/imported_images/uploads/2020/02/p2-spotlight-hotels-a-20200228.jpg', 2, 11),
 (6, 'KFC', 'A globally renowned fast-food chain celebrated for its iconic crispy fried chicken. Offering a diverse menu, KFC is known for its savory flavors and distinctive dining experience.', 'https://www.foodmanufacture.co.uk/var/wrbm_gb_food_pharma/storage/images/1/5/5/1/1091551-1-eng-GB/KFC-prepares-for-growth-with-40M-investment.jpg', 4, 15),
 (7, 'Carl\'s Jr.', 'A popular fast-food chain recognized for its bold, charbroiled burgers, hand-breaded chicken tenders, and indulgent milkshakes. Known for quality ingredients, Carl\'s Jr. delivers a satisfying dining experience.', 'https://logos-world.net/wp-content/uploads/2022/11/Carls-Jr.-Symbol.png', 4, 15),
 (8, 'Beard Papa\'s', 'A renowned dessert franchise globally recognized for its indulgent cream puffs. Known for their crispy shells and rich fillings, Beard Papa\'s offers a delightful and unique pastry experience.', 'https://asset.kompas.com/crops/3HurX_sCDnq6Ymz3ICHkIFaOYq8=/0x0:866x577/750x500/data/photo/2022/09/05/6315d56e12180.png', 4, 15),
 (9, 'Hanwoori House', 'Korean culinary haven, invites you to savor the artful fusion of traditional flavors and contemporary flair. Immerse in a cozy ambiance reminiscent of a hanok, where each dish, from Bulgogi to Bibimbap, tells a story of authentic Korean gastronomy.', 'https://seattletravel.com/wp-content/uploads/2022/12/KoreanFoodHeader.jpg', 3, 14),
-(10, 'Thai Terrace', 'Where the vibrant flavors of Thailand meet the serene ambiance of a tranquil terrace. Indulge in authentic Thai cuisine crafted with precision and care, featuring classic dishes like Pad Thai, Green Curry, and Mango Sticky Rice. Immerse yourself in the enchanting Thai culinary experience at Thai Terrace.', 'https://secretnyc.co/wp-content/uploads/2023/02/AF_SOOTHR_22.jpeg', 3, 14);
+(10, 'Thai Terrace', 'Where the vibrant flavors of Thailand meet the serene ambiance of a tranquil terrace. Indulge in authentic Thai cuisine crafted with precision and care, featuring classic dishes like Pad Thai, Green Curry, and Mango Sticky Rice. Immerse yourself in the enchanting Thai culinary experience at Thai Terrace.', 'https://www.seriouseats.com/thmb/-4GNKHrjwAGlerjRANGJe6reAuM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__10__20201030-thai-table-full-spread-derek-lucci-2-98b68d326aa3474a8d972a5c2c473e38.jpg', 3, 14);
 
 -- --------------------------------------------------------
 
@@ -185,7 +186,8 @@ INSERT INTO `transaction` (`transaction_id`, `total`, `date`, `status`, `payment
 (8, 3520000, '2023-12-28', 'Order Finished', 1, 1, 2),
 (10, 45000, '2023-12-30', 'Order Finished', 1, 1, 1),
 (11, 50000, '2023-12-30', 'Order Finished', 1, 1, 3),
-(12, 110000, '2023-12-30', 'Order Placed', 1, 1, 10);
+(12, 110000, '2023-12-30', 'Order Placed', 1, 1, 10),
+(16, 170000, '2023-12-30', 'Order Finished', 1, 17, 1);
 
 -- --------------------------------------------------------
 
@@ -211,7 +213,8 @@ INSERT INTO `transaction_detail` (`transaction_id`, `menu_id`, `quantity`, `note
 (8, 3, 1, '', 60000),
 (10, 30, 1, '', 45000),
 (11, 34, 1, '', 50000),
-(12, 45, 2, '', 110000);
+(12, 45, 2, '', 110000),
+(16, 31, 2, 'Tanpa sayur', 170000);
 
 -- --------------------------------------------------------
 
@@ -234,7 +237,8 @@ INSERT INTO `user` (`user_id`, `username`, `pass`) VALUES
 (9, 'owner1', '123'),
 (11, 'owner2', '123'),
 (14, 'owner3', '123'),
-(15, 'owner4', '123');
+(15, 'owner4', '123'),
+(17, 'test', '123');
 
 --
 -- Indexes for dumped tables
@@ -308,7 +312,7 @@ ALTER TABLE `kantin`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `payment`
@@ -326,13 +330,13 @@ ALTER TABLE `stall`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
