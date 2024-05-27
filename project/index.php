@@ -104,6 +104,11 @@
             a {
                 text-decoration: none;
             }
+            .card-text{
+                line-height: 1.5em;
+                height: 3em;       
+                overflow: hidden;  
+            }
             
         </style>
     </head>
