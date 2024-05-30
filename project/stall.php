@@ -331,6 +331,22 @@
                             }
                         });
                     });
+
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Get all the buttons with class 'magic'
+                        var buttons = document.querySelectorAll('.btn-group .magic');
+
+                        buttons.forEach(function(button) {
+                            button.addEventListener('click', function() {
+                                // Remove 'active' class from all buttons
+                                buttons.forEach(function(btn) {
+                                    btn.classList.remove('active');
+                                });
+                                // Add 'active' class to the clicked button
+                                this.classList.add('active');
+                            });
+                        });
+                    });
                 
                 });
             </script>
@@ -372,6 +388,12 @@
                 a {
                     text-decoration: none;
                 }
+                .btn-outline-secondary.active {
+                    background-color: #6c757d;
+                    color: #fff;
+                    border-color: #6c757d;
+                }
+
 
             </style>
         </head>

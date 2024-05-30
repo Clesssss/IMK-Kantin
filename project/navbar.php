@@ -8,26 +8,25 @@
     }
 ?>
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <a href ="index.php"><img src="download (2).png" alt="PCU" width="60" height="35.4838709677" class="me-2"></a>
-    <a href ="index.php" style="color: black; text-decoration: none;"><h5 class="my-0 me-md-auto fw-normal">Canteen</h5></a>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom box-shadow" style="background-color: #19304c" >
+    <a href ="index.php"><img src="logopcu.webp" alt="PCU" width="100" height="35.4838709677" class="me-2"></a>
     <nav class="my-2 my-md-0 ms-md-auto">
-        <a class="p-2 text-dark" href="stall.php">Stall</a>
-        <a class="p-2 text-dark" href="menu.php">Menu</a>
-        <a id="cartLink" class="p-2 text-dark" href="cart.php">Cart</a>
-        <a id="historyLink" class="p-2 text-dark" href="history.php">History</a>
-        <a id="orderLink" class="p-2 text-dark" href="order.php">Order</a>
+        <a class="p-2 text-white" href="stall.php">Stall</a>
+        <a id="menuLink" class="p-2 text-white" href="menu.php">Menu</a>
+        <a id="cartLink" class="p-2 text-white" href="cart.php">Cart</a>
+        <a id="historyLink" class="p-2 text-white" href="history.php">History</a>
+        <a id="orderLink" class="p-2 text-white" href="order.php">Order</a>
     </nav>
     <?php if (!empty($welcomeMessage)): ?>
         <!-- Divider between navigation links and welcome message -->
          <div class="vertical-divider" style="height: 35px; width: 1px; background-color: #000; margin: 0 10px; display: inline-block;"></div> 
 
         <!-- Display welcome message and logout link if the user is logged in -->
-        <span><?= $welcomeMessage; ?></span>
+        <span style="color: white"><?= $welcomeMessage; ?></span>
         <a class="btn btn-link" href="logout.php">Logout</a>
     <?php else: ?>
         <!-- Display Sign Up button if the user is not logged in -->
-        <a class="btn btn-outline-primary mx-3" href="signup.php">Sign up</a>
+        <a class="btn btn-outline-light mx-3" href="signup.php">Sign up</a>
     <?php endif; ?>
 </div>
 
